@@ -10,7 +10,7 @@ data class ColorSchemes(val name: String, val color: Color)
 @Composable
 fun getColorSchemes(): List<ColorSchemesItems> {
     return listOf(
-        ColorSchemesItems("primary",
+        ColorSchemesItems("Primary",
             listOf(
                 ColorSchemes("primary",MaterialTheme.colorScheme.primary),
                 ColorSchemes("onPrimary",MaterialTheme.colorScheme.onPrimary),
@@ -19,7 +19,7 @@ fun getColorSchemes(): List<ColorSchemesItems> {
                 ColorSchemes("primaryContainer",MaterialTheme.colorScheme.primaryContainer),
             )
         ),
-        ColorSchemesItems("secondary",
+        ColorSchemesItems("Secondary",
             listOf(
                 ColorSchemes("secondary",MaterialTheme.colorScheme.secondary),
                 ColorSchemes("onSecondary",MaterialTheme.colorScheme.onSecondary),
@@ -27,7 +27,7 @@ fun getColorSchemes(): List<ColorSchemesItems> {
                 ColorSchemes("onSecondaryContainer",MaterialTheme.colorScheme.onSecondaryContainer),
             )
         ),
-        ColorSchemesItems("tertiary",
+        ColorSchemesItems("Tertiary",
             listOf(
                 ColorSchemes("tertiary",MaterialTheme.colorScheme.tertiary),
                 ColorSchemes("onTertiary",MaterialTheme.colorScheme.onTertiary),
@@ -43,7 +43,7 @@ fun getColorSchemes(): List<ColorSchemesItems> {
                 ColorSchemes("onErrorContainer",MaterialTheme.colorScheme.onErrorContainer),
             )
         ),
-        ColorSchemesItems("background",
+        ColorSchemesItems("Background and Surface",
             listOf(
                 ColorSchemes("background",MaterialTheme.colorScheme.background),
                 ColorSchemes("onBackground",MaterialTheme.colorScheme.onBackground),

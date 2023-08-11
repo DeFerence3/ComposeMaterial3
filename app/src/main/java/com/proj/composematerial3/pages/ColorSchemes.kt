@@ -1,4 +1,4 @@
-package com.proj.composematerial3.navigationpages
+package com.proj.composematerial3.pages
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border

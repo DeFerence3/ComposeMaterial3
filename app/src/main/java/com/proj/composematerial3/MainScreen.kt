@@ -21,9 +21,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.proj.composematerial3.navigationpages.ColorSchemes
-import com.proj.composematerial3.navigationpages.Components
-import com.proj.composematerial3.navigationpages.Typographys
+import com.proj.composematerial3.pages.ColorSchemes
+import com.proj.composematerial3.pages.Components
+import com.proj.composematerial3.pages.Typographys
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
