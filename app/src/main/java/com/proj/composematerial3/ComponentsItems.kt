@@ -1,9 +1,9 @@
 package com.proj.composematerial3
 
-import androidx.compose.ui.graphics.Color
+/*
 
 data class ComponentItems(val comp: String, val route: String)
-data class Components(val name: String, val color: Color)
+data class Components(val name: String, val color: Color)*/
 
 fun getComponents(): List<String> {
     return listOf(
@@ -20,8 +20,8 @@ fun getComponents(): List<String> {
         "Dialogs",
         "FABS",
         "IconButtons",
-        "Menu",
         "List",
+        "Menu",
         "Navigation Bars",
         "Navigation Drawer",
         "Navigation Rails",
