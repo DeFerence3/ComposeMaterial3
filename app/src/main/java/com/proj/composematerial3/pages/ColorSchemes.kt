@@ -67,7 +67,8 @@ fun EachBoxesOfColors(colorScheme: ColorSchemesItems) {
 
                     ) {
                         Text(
-                            text = color.name,
+                            text = "${color.name} (${color.textColorName})",
+                            color = color.textColor,
                             modifier = Modifier
                                 .align(
                                     alignment = Alignment.CenterStart

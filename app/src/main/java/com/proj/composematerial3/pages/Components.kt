@@ -1,6 +1,5 @@
 package com.proj.composematerial3.pages
 
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -13,12 +12,21 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import com.proj.composematerial3.ComponentItems
 import com.proj.composematerial3.getComponents
+import com.proj.composematerial3.screen.CompScreen
 
 @Composable
 fun Components() {
 
+    val navController = rememberNavController()
     val components = getComponents()
+    CompNavController(navController,components)
+}
+
+@Composable
+fun ComponentsListScreen(navController: NavHostController, components: List<ComponentItems>) {
 
     LazyColumn(
         modifier = Modifier
@@ -26,28 +34,32 @@ fun Components() {
             .fillMaxWidth()
     ) {
         itemsIndexed(components) { index,component ->
-            TextButton(onClick = { /*TODO*/ }) {
-                Text(text = "${index+1}) $component")
+            TextButton(onClick = {
+                component.comp
+            }) {
+                Text(text = "${index+1}) ${component.comp}")
             }
         }
     }
+
 }
 
 @Composable
-fun NavController(navController: NavHostController, paddingValues: PaddingValues) {
+fun CompNavController(navController: NavHostController, components: List<ComponentItems>) {
     NavHost(
         navController = navController,
-        startDestination = "colorschemes",
-        Modifier.padding(paddingValues)
+        startDestination = "components-list",
     ) {
-        composable("colorschemes") {
-            ColorSchemes()
+        composable("components-list") {
+            ComponentsListScreen(navController,components)
         }
-        composable("typographys") {
-            Typographys()
+        components.forEach { comp ->
+            composable(comp.comp) {
+                comp.route
+            }
         }
-        composable("components") {
-            Components()
-        }
+        /*composable("component-screen") {
+            CompScreen()
+        }*/
     }
 }
